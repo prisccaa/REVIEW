@@ -8,16 +8,23 @@ int main() {
     l.push_back(20);
     l.push_back(2);
     l.push_back(5);
+    list<int>::iterator it;
     cout << "---------------- " << endl;
-    
-    list<int>::iterator it = l.begin(); // INITIALIZED
+    cout <<  "List of elements in the list before erasing: " << endl;
+    for (it = l.begin(); it != l.end(); it++){
+        cout << *it << endl;
+    }
+    cout << "Size before erasing: " << l.size() << endl;
+    it = l.begin(); // INITIALIZED
     for(int i = 0; i < 2; i++) {
         it++; 
     }
     l.erase(it);
-    cout <<  "List of elements in the list: " << endl;
+    cout << "---------------- " << endl;
+    cout <<  "List of elements in the list after erasing: " << endl;
     for (it = l.begin(); it != l.end(); it++){
         cout << *it << endl;
     }
+    cout << "Size after erasing: " << l.size() << endl;
     return 0;
 }
